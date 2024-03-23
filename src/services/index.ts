@@ -15,7 +15,7 @@ export async function FetchImages() {
 
 export async function AllCards() {
   try {
-    const response = await axios.get("http://localhost:5000/");
+    const response = await axios.get("https://necoleo-be.vercel.app/");
     return response.data;
   } catch (error) {
     console.error("Error fetching images:", error);
@@ -25,7 +25,10 @@ export async function AllCards() {
 
 export async function CreateCards(CardData: any) {
   try {
-    const response = await axios.post("http://localhost:5000/", CardData);
+    const response = await axios.post(
+      "https://necoleo-be.vercel.app/",
+      CardData
+    );
     return response.data.result;
   } catch (error) {
     console.error("Error fetching images:", error);
@@ -36,7 +39,7 @@ export async function CreateCards(CardData: any) {
 export async function DeleteCards(CardId: any) {
   try {
     const response = await axios.delete(
-      `http://localhost:5000/delete/${CardId}`
+      `https://necoleo-be.vercel.app/delete/${CardId}`
     );
     console.log(response.data); // Log the response data
     return response.data.result; // Return the response data
@@ -48,7 +51,7 @@ export async function DeleteCards(CardId: any) {
 export async function EditCards(CardData: ImagesProps) {
   try {
     const response = await axios.patch(
-      "http://localhost:5000/update/" + CardData._id,
+      "https://necoleo-be.vercel.app/update/" + CardData._id,
       CardData
     );
     return response.data.result;
