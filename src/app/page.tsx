@@ -4,11 +4,7 @@ import SideBar from "@/components/SideBar";
 import { Box } from "@mui/material";
 import Image from "next/image";
 
-export default function Home({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Home({ children }: any) {
   return (
     <Box className="grid grid-cols-12">
       <Box className="lg:flex hidden md:flex w-full col-span-2">
@@ -16,7 +12,7 @@ export default function Home({
       </Box>
       <Box className="w-full col-span-12 md:col-span-10 lg:col-span-10">
         <AppBar />
-        <ProjectAdd/>
+        <ProjectAdd />
       </Box>
     </Box>
   );
