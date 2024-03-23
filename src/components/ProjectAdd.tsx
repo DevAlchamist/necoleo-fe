@@ -74,7 +74,10 @@ const ProjectAdd: React.FC = () => {
         </Box>
         {AllCardData ? (
           AllCardData?.map((data: ImagesProps) => (
-            <Box className="flex items-center justify-center col-span-1">
+            <Box
+              key={data.id}
+              className="flex items-center justify-center col-span-1"
+            >
               <Card
                 author={data.author}
                 download_url={data.download_url}
