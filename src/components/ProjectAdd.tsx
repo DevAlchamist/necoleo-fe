@@ -49,7 +49,7 @@ const ProjectAdd: React.FC = () => {
   useEffect(() => {
     dispatch(FetchImagesAsync()); // Dispatch the action to fetch images
     dispatch(AllCardsAsync()); // Dispatch the action to fetch images
-  }, []);
+  }, [dispatch]);
 
   return (
     <Box className="w-full">
