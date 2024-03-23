@@ -79,6 +79,7 @@ const ProjectAdd: React.FC = () => {
               className="flex items-center justify-center col-span-1"
             >
               <Card
+              key={data._id}
                 author={data.author}
                 download_url={data.download_url}
                 url={data.url}
